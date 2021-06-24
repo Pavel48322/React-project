@@ -9,6 +9,14 @@ import PostAddForm from '../post-add-form';
 import './app.css'; 
 
 const App = () => {
+
+    const data = [
+        {label: 'Going to lealrn React', important: true, id: "fsfsdf"},
+        {label: 'That is so good', important: false, id: 'dfsddfsdf'},
+        {label: 'I need a break...', important: false, id: 'dasdasd'}
+    ]; // Имитируем что это приходит с сервера
+    // id относится к первому варианту. подробнее в post-list
+
     return (
         <div className="app">
             <AppHeader/>
@@ -16,7 +24,7 @@ const App = () => {
                 <SearchPanel/>
                 <PostStatusFilter/>
             </div>
-            <PostList/>
+            <PostList posts={data}/>
             <PostAddForm/>
         </div>
     )
